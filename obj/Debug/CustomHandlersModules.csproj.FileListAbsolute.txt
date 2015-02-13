@@ -1,0 +1,6 @@
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\CustomHandlersModules.dll.config
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\CustomHandlersModules.dll
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\CustomHandlersModules.pdb
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\obj\Debug\CustomHandlersModules.csprojResolveAssemblyReference.cache
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\obj\Debug\CustomHandlersModules.dll
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\obj\Debug\CustomHandlersModules.pdb
