@@ -60,14 +60,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomHandlers\HelloHandler.ashx.cs">
-      <DependentUpon>HelloHandler.ashx</DependentUpon>
+    <Compile Include="CustomHandlers\JSONAsyncHandler.cs" />
+    <Compile Include="CustomHandlers\JSONHandler.ashx.cs">
+      <DependentUpon>JSONHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="CustomHandlers\HelloHandler2.cs" />
+    <Compile Include="CustomHandlers\JSONHandler2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CustomHandlers\HelloHandler.ashx" />
+    <Content Include="CustomHandlers\JSONHandler.ashx" />
+    <Content Include="contact.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
