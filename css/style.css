@@ -1,0 +1,46 @@
+﻿@-ms-viewport {
+    width: device-width;
+}
+
+body {
+}
+
+#header {
+    padding: 5% 0 3% 0;
+    background: url(logo.png), linear-gradient(to right, #ff2e2e, #980303);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, center;
+    background-size: contain, 100%;
+}
+
+#menu {
+    padding: 1% 0 3% 0;
+    background: #e4f1fb;
+    text-transform: uppercase;
+    display: block;
+}
+
+    #menu ul {
+        padding-left: 10px;
+        list-style-type: none;
+    }
+
+        #menu ul li {
+            float: left;
+        }
+
+            #menu ul li a {
+                padding: 0 10px;
+                text-decoration: none;
+            }
+
+.login {
+    display: block;
+    padding: 0 0 0 20px;
+}
+
+.login_wrap {
+    display: none;
+    padding: 0 0 0 20px;
+    margin: 1px 80% 0 0;
+}

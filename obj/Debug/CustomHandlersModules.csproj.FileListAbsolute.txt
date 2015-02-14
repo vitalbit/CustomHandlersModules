@@ -4,3 +4,7 @@ D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\CustomHandl
 D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\obj\Debug\CustomHandlersModules.csprojResolveAssemblyReference.cache
 D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\obj\Debug\CustomHandlersModules.dll
 D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\obj\Debug\CustomHandlersModules.pdb
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\EntityFramework.dll
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\EntityFramework.SqlServer.dll
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\EntityFramework.xml
+D:\Vitali_Pantsialei\CustomHandlersModules\CustomHandlersModules\bin\EntityFramework.SqlServer.xml
