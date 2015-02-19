@@ -44,3 +44,35 @@ body {
     padding: 0 0 0 20px;
     margin: 1px 80% 0 0;
 }
+
+
+.json_area {
+    background-color: orange;
+    padding: 2% 1% 2% 1%;
+}
+
+#tab {
+    display: block;
+    width: 200px;
+    height: 25px;
+    background-color: #f6b977;
+}
+
+    #tab ul {
+        padding-left: 10px;
+        list-style-type: none;
+    }
+
+        #tab ul li {
+            float: left;
+        }
+
+            #tab ul li a {
+                padding: 0 10px;
+                text-decoration: none;
+                text-align: center;
+            }
+
+                #tab ul li a:hover {
+                    background-color: yellow;
+                }

@@ -2,8 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>JSON reader</title>
+    <meta charset="utf-8" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="scripts/show_login.js"></script>
+    <script type="text/javascript" src="scripts/get_xml_http.js"></script>
+    <script type="text/javascript" src="scripts/get_cookie.js"></script>
+    <script>
+        document.onreadystatechange = function () {
+            var login = document.getElementById('login_li');
+            if (getCookie('__AUTH_COOKIE_') != '') {
+                login.innerHTML = '<a href="#" id="exit" onclick="logout();">Выйти</a>';
+            }
+        }
+    </script>
+    <script>
+        function logout() {
+            document.cookie = "__AUTH_COOKIE_=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            var login_li = document.getElementById('login_li');
+            login_li.innerHTML = '<a href="#" onclick="show_login(); return false;">Войти</a>';
+        }
+    </script>
 </head>
 <body>
     <div id="header">
@@ -11,7 +29,7 @@
     </div>
     <div id="menu">
         <ul>
-            <li><a href="#" class="login" onclick="show_login(); return false;">Войти</a></li>
+            <li id="login_li"><a href="#" id="enter" onclick="show_login(); return false;">Войти</a></li>
             <li><a href="#">Load data</a></li>
         </ul>
     </div>
@@ -19,13 +37,23 @@
         <legend></legend>
         Логин
         <br />
-        <input type="text" />
+        <input id="login" type="text" />
         <br />
         Пароль
         <br />
-        <input type="password" />
+        <input id="password" type="password" />
         <br />
-        <input type="button" value="Вход" />
+        <input id="subm_button" type="button" onclick="login();" value="Вход" />
+        <img id="loading" src="css/loader.gif" style="display: none"/>
     </fieldset>
+    <div id="tab" style="display:none">
+        <ul>
+            <li><a href="#">JSON text</a></li>
+            <li><a href="#">JSON tree</a></li>
+        </ul>
+    </div>
+    <div class="json_area" style="display:none">
+        <input type="text" style="padding: 0 80% 80% 0; margin: 1% 0 0 1%"/>
+    </div>
 </body>
 </html>

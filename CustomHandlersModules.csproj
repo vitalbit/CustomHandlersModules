@@ -63,19 +63,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="answer.txt" />
     <Content Include="css\style.css" />
     <Content Include="Index.html" />
     <Content Include="css\logo.png" />
+    <Content Include="scripts\get_cookie.js" />
+    <Content Include="scripts\get_xml_http.js" />
     <Content Include="scripts\show_login.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthModule\CustomAuthenticationModule.cs" />
+    <Compile Include="AuthModule\UserIdentity.cs" />
+    <Compile Include="AuthModule\UserProvider.cs" />
+    <Compile Include="CustomHandlers\AuthorizationHandler.cs" />
     <Compile Include="CustomHandlers\JSONAsyncHandler.cs" />
     <Compile Include="CustomHandlers\JSONHandler.ashx.cs">
       <DependentUpon>JSONHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="CustomHandlers\JSONHandler2.cs" />
+    <Compile Include="CustomHandlers\RegistrationHandler.cs" />
     <Compile Include="EFDataContext\UsersContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,7 +99,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
