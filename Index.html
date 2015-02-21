@@ -7,19 +7,23 @@
     <script type="text/javascript" src="scripts/show_login.js"></script>
     <script type="text/javascript" src="scripts/get_xml_http.js"></script>
     <script type="text/javascript" src="scripts/get_cookie.js"></script>
+    <script type="text/javascript" src="scripts/tab_control.js"></script>
+    <script type="text/javascript" src="scripts/tree.js"></script>
     <script>
         document.onreadystatechange = function () {
             var login = document.getElementById('login_li');
-            if (getCookie('__AUTH_COOKIE_') != '') {
-                login.innerHTML = '<a href="#" id="exit" onclick="logout();">Выйти</a>';
+            var enter = document.getElementById('enter');
+            var subm = document.getElementById('subm_button');
+            var json_text = document.getElementById('json_text');
+            var json_tree = document.getElementById('json_tree');
+
+            enter.onclick = loginBox.showLogin;
+            subm.onclick = xmlHttp.login;
+            json_text.onclick = tabControl.toTextHref;
+            json_tree.onclick = tabControl.toTreeHref;
+            if (cookieWork.getCookie('__AUTH_COOKIE_') != '') {
+                login.innerHTML = '<li><a href="#" id="exit" onclick="loginBox.logout();">Выйти</a></li><li><input type="button" value="Load data" onclick="xmlHttp.loadJson()"/></li>';
             }
-        }
-    </script>
-    <script>
-        function logout() {
-            document.cookie = "__AUTH_COOKIE_=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-            var login_li = document.getElementById('login_li');
-            login_li.innerHTML = '<a href="#" onclick="show_login(); return false;">Войти</a>';
         }
     </script>
 </head>
@@ -28,9 +32,8 @@
 
     </div>
     <div id="menu">
-        <ul>
-            <li id="login_li"><a href="#" id="enter" onclick="show_login(); return false;">Войти</a></li>
-            <li><a href="#">Load data</a></li>
+        <ul id="login_li">
+            <li><a href="#" id="enter">Войти</a></li>
         </ul>
     </div>
     <fieldset id="login_wrap" class="login_wrap" style="display:none;">
@@ -43,17 +46,18 @@
         <br />
         <input id="password" type="password" />
         <br />
-        <input id="subm_button" type="button" onclick="login();" value="Вход" />
-        <img id="loading" src="css/loader.gif" style="display: none"/>
+        <input id="subm_button" type="button" value="Вход" />
+        <center><img id="loading" src="css/loader.gif" style="display: none" /></center>
     </fieldset>
     <div id="tab" style="display:none">
         <ul>
-            <li><a href="#">JSON text</a></li>
-            <li><a href="#">JSON tree</a></li>
+            <li id="json_text">JSON text</li>
+            <li id="json_tree">JSON tree</li>
         </ul>
     </div>
-    <div class="json_area" style="display:none">
-        <input type="text" style="padding: 0 80% 80% 0; margin: 1% 0 0 1%"/>
+    <div id="json_area" class="json_area" style="display:none">
+        <textarea id="text_area"></textarea>
+        <div id="tree_area" style="padding: 0 0 25% 0; margin: 1% 0 0 1%; display: none"></div>
     </div>
 </body>
 </html>

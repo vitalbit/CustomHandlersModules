@@ -22,7 +22,7 @@ namespace CustomHandlersModules.CustomHandlers
             string pass = context.Request.Params["password"];
             if (login == "" || pass == "")
             {
-                context.Response.Write("<a href=\"#\" id=\"enter\" onclick=\"show_login(); return false;\">Войти</a>");
+                context.Response.Write("<li><a href=\"#\" id=\"enter\" onclick=\"loginBox.showLogin(); return false;\">Войти</a></li>");
                 context.Response.End();
             }
             User fuser = users.Set<User>().FirstOrDefault(user => user.Login == login);
@@ -34,12 +34,12 @@ namespace CustomHandlersModules.CustomHandlers
                 cookie.Value = encTicket;
                 cookie.Expires = DateTime.Now.Add(FormsAuthentication.Timeout);
                 context.Response.Cookies.Add(cookie);
-                context.Response.Write("<a href=\"#\" id=\"exit\" onclick=\"logout();\">Выйти</a>");
+                context.Response.Write("<li><a href=\"#\" id=\"exit\" onclick=\"loginBox.logout();\">Выйти</a></li><li><input type=\"button\" value=\"Load data\" onclick=\"xmlHttp.loadJson()\"/></li>");
                 context.Response.End();
             }
             else
             {
-                context.Response.Write("<a href=\"#\" id=\"enter\" onclick=\"show_login(); return false;\">Войти</a>");
+                context.Response.Write("<li><a href=\"#\" id=\"enter\" onclick=\"loginBox.showLogin(); return false;\">Войти</a></li>");
                 context.Response.End();
             }
         }

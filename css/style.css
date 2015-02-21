@@ -30,7 +30,7 @@ body {
         }
 
             #menu ul li a {
-                padding: 0 10px;
+                padding: 0 40px;
                 text-decoration: none;
             }
 
@@ -53,9 +53,8 @@ body {
 
 #tab {
     display: block;
-    width: 200px;
-    height: 25px;
-    background-color: #f6b977;
+    width: 300px;
+    height: 50px;
 }
 
     #tab ul {
@@ -64,15 +63,22 @@ body {
     }
 
         #tab ul li {
+            height: 50px;
+            width: 100px;
+            background-color: #f6b977;
             float: left;
+            text-align: center;
         }
 
-            #tab ul li a {
-                padding: 0 10px;
-                text-decoration: none;
-                text-align: center;
+            #tab ul li:hover {
+                background-color: yellow;
             }
 
-                #tab ul li a:hover {
-                    background-color: yellow;
-                }
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0 25% 0;
+    width: 100%;
+    display: block;
+}

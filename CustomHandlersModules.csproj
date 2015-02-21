@@ -64,12 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="answer.txt" />
+    <Content Include="css\loader.gif" />
+    <Content Include="css\minus.gif" />
+    <Content Include="css\plus.gif" />
     <Content Include="css\style.css" />
     <Content Include="Index.html" />
     <Content Include="css\logo.png" />
     <Content Include="scripts\get_cookie.js" />
     <Content Include="scripts\get_xml_http.js" />
     <Content Include="scripts\show_login.js" />
+    <Content Include="scripts\tab_control.js" />
+    <Content Include="scripts\tree.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
