@@ -35,6 +35,7 @@ namespace CustomHandlersModules.AuthModule
                     cookie.Expires.Add(FormsAuthentication.Timeout);
                     context.Response.Cookies.Set(cookie);
                     context.Response.StatusCode = 200;
+                    context.User = new UserProvider(users.Set<User>().First(user => user.Login == ticket.Name));
                 }
                 else
                 {

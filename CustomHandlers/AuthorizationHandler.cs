@@ -1,4 +1,5 @@
-﻿using CustomHandlersModules.EFDataContext;
+﻿using CustomHandlersModules.AuthModule;
+using CustomHandlersModules.EFDataContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace CustomHandlersModules.CustomHandlers
                 cookie.Value = encTicket;
                 cookie.Expires = DateTime.Now.Add(FormsAuthentication.Timeout);
                 context.Response.Cookies.Add(cookie);
+                context.User = new UserProvider(users.Set<User>().First(user => user.Login == ticket.Name));
                 context.Response.Write("<li><a href=\"#\" id=\"exit\" onclick=\"loginBox.logout();\">Выйти</a></li><li><input type=\"button\" value=\"Load data\" onclick=\"xmlHttp.loadJson()\"/></li>");
                 context.Response.End();
             }
