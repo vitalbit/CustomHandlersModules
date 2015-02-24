@@ -22,7 +22,7 @@
             json_text.onclick = tabControl.toTextHref;
             json_tree.onclick = tabControl.toTreeHref;
             if (cookieWork.getCookie('__AUTH_COOKIE_') != '') {
-                login.innerHTML = '<li><a href="#" id="exit" onclick="loginBox.logout();">Выйти</a></li><li><input type="button" value="Load data" onclick="xmlHttp.loadJson()"/></li>';
+                login.innerHTML = '<li><a href="#" id="exit" onclick="loginBox.logout();">Выйти</a></li><li><input id="load_json" type="button" value="Load data" onclick="xmlHttp.loadJson()"/></li>';
             }
         }
     </script>
